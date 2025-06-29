@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.inputEstilo{
+    border: none;
+    height: 40px;
+}
+.inputEstilo:focus{
+  border: none;
+  outline: none;
+}
+
+.input-header{
+  
+}
+.input-header .icone{
+  position: absolute;
+
+}
+.input-header input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0% 20% 0% 0%;
+}
