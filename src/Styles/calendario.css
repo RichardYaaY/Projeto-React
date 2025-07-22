@@ -1,0 +1,80 @@
+@import 'react-big-calendar/lib/css/react-big-calendar.css';
+
+/* Contêiner que envolve o calendário */
+.calendario-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Alterado para preencher o espaço do pai (.app-main) */
+  padding: 10px;
+}
+
+/* O componente do calendário em si */
+.calendario-container .rbc-calendar {
+  flex: 1; /* Faz o calendário crescer para ocupar o espaço disponível */
+}
+
+/* Barra de ferramentas */
+.rbc-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px; /* Tamanho de fonte base menor */
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.rbc-toolbar .rbc-btn-group {
+  display: flex;
+  gap: 4px;
+}
+
+.rbc-toolbar button {
+  padding: 5px 8px; /* Botões menores */
+  font-size: 0.9em;
+  color: #374151;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.rbc-toolbar button:hover,
+.rbc-toolbar button.rbc-active {
+  background-color: #3174ad;
+  color: white;
+  border-color: #3174ad;
+}
+
+/* Itens do calendário */
+.rbc-event {
+  font-size: 0.75em;
+}
+
+.rbc-header span {
+  font-size: 0.8em;
+}
+
+/* Ajustes para telas bem pequenas (como 390px de largura) */
+@media (max-width: 420px) {
+  .rbc-toolbar {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .rbc-toolbar-label {
+    order: -1; /* Joga o nome do mês para cima */
+  }
+
+  .rbc-toolbar .rbc-btn-group {
+    justify-content: center;
+    width: 100%;
+  }
+}

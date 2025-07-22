@@ -5,7 +5,10 @@
 }
 .app-main{
     background-color: #ffffff;
-    margin: 10% 5% 10% 5%;
+    margin: 20px 10px; 
     flex: 1;
-    border-radius: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
 }
